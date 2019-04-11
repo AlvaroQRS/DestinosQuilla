@@ -126,6 +126,10 @@
 
     .single-footer-widget {
         color:#fff;
+        ul{
+            padding: 0;
+            list-style: none;
+        }
         input {
             line-height: 38px;
             border: none;

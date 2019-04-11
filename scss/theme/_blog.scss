@@ -46,6 +46,28 @@
         background: rgba(#000, .50);
     }
 }
+.blog-home-banner-2 {
+    background: url(../img/mini-destinos/Quillabamba/fotos/2.jpg) bottom;
+    background-size: cover;
+    padding: 130px 0px;
+    .primary-btn {
+        border-radius: 0px;
+        background: $white;
+        color: $black;
+        font-weight: 600;
+        border: 1px solid transparent;
+        @include transition();
+        &:hover {
+            background: transparent;
+            border-color: $white;
+            color: $white;
+        }
+    }
+    .overlay-bg {
+        background: rgba(#000, .50);
+    }
+}
+
 
 .blog-page {
     background: #f9f9ff;
@@ -412,6 +434,9 @@
             padding: 12px 0px;
         }
         .cat-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
             li {
                 p {
                     font-weight: 300;
@@ -512,6 +537,9 @@
             margin-bottom: 30px;
         }
         ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
             li {
                 display: inline-block;
                 border: 1px solid #eee;

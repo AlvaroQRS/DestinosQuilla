@@ -449,6 +449,43 @@ $(document).ready(function() {
     $(document).ready(function() {
         $('#mc_embed_signup').find('form').ajaxChimp();
     });
-    
 
+    // $( '#btn-validate' ).click(function(){
+    //     var $captcha = $( '#recaptcha' ),
+    //         response = grecaptcha.getResponse();
+        
+    //     if (response.length === 0) {
+    //       $( '.msg-error').text( "reCAPTCHA es obligatorio" );
+    //       if( !$captcha.hasClass( "error" ) ){
+    //         $captcha.addClass( "error" );
+    //       }
+    //     } else {
+    //       $( '.msg-error' ).text('');
+    //       $captcha.removeClass( "error" );
+    //       alert( 'reCAPTCHA marcado' );
+    //     }
+    //   });
+
+    $(".contact-form").bind("submit", function(){
+        $.ajax({
+            type:$(this).attr("method"),
+            url:$(this).attr("action"),
+            data:$(this).serialize(),
+            success:function(){
+                    $("#alert").removeClass("hide").removeClass("alert-danger").removeClass("alert-success").addClass("alert-success");
+                    $(".respuesta").html("Mensaje enviado  te contactaremos los mas pronto posible.");
+                    $(".mensaje-alerta").html("El Mensaje ha sido enviado Correctamente.")
+            },
+            error: function(){
+                $("#alert").removeClass("hide").removeClass("alert-danger").removeClass("alert-success").addClass("alert-danger");
+                $(".respuesta").html("ups!! Algo fallo intentanlo nuevamente");
+                $(".mensaje-alerta").html("No se pudo enviar el mensaje intentalo de nuevo.")              
+            }
+        });
+        return false;
+    });
+    
+    $('.flexslider').flexslider({
+        touch: true,
+    });
 });
