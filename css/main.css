@@ -1605,6 +1605,22 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 8px; }
   .header-top .header-top-right {
     text-align: right; }
+    .header-top .header-top-right .header-social ul {
+      margin: 0;
+      padding: 0; }
+      .header-top .header-top-right .header-social ul li {
+        display: inline-block;
+        color: #fff;
+        font-size: 12px; }
+        .header-top .header-top-right .header-social ul li .fa {
+          padding-left: 15px;
+          font-size: 14px; }
+    .header-top .header-top-right .header-social .fa-whatsapp {
+      color: #25d366; }
+    .header-top .header-top-right .header-social .fa-phone {
+      color: #3FBAEF; }
+    .header-top .header-top-right .header-social .fa-envelope {
+      color: #F25432; }
     .header-top .header-top-right .header-social a {
       color: #fff;
       margin-left: 15px;
@@ -1707,7 +1723,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   color: #fff;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   outline: none; }
 
