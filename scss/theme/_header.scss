@@ -31,7 +31,10 @@
     }
     a{
         margin-right:8px;
-    }
+	}
+	@media (max-width: 991px){
+		display: none;
+	}
   }
 
   .header-top-right{
@@ -69,7 +72,7 @@
           color:$primary-color;
         }
       }
-    }
+	}
   }
 
 }
